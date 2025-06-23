@@ -1,0 +1,39 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    char grade;
+    printf("enter your grade(E,V,G,A):");
+    scanf("%c",&grade);
+    switch(grade)
+    {
+        case 'E':
+        case 'e':
+          printf("excellent:\n");
+          break;
+        case 'V':
+        case 'v':
+          printf("very good:\n");
+          break;
+        case 'G':
+        case 'g':
+          printf("good:\n");
+          break;
+        case 'A':
+        case 'a':
+          printf("average:\n");
+          break;
+    default:
+         printf("invalid grade entered:\n");
+    }
+    return 0;
+}
+         

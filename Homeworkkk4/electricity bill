@@ -1,0 +1,51 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    int customerID;
+    char customerName[50];
+    float units, chargePerUnit, amount, surcharge = 0.0, totalAmount;
+
+    printf("Enter Customer ID: ");
+    scanf("%d", &customerID);
+
+    printf("Enter Customer Name: ");
+    scanf("%s", customerName);
+
+    printf("Enter units consumed: ");
+    scanf("%f", &units);
+    if (units <= 199)
+        chargePerUnit = 1.20;
+    else if (units < 400)
+        chargePerUnit = 1.50;
+    else if (units < 600)
+        chargePerUnit = 1.80;
+    else
+        chargePerUnit = 2.00;
+
+    amount = units * chargePerUnit;
+
+    if (amount > 400)
+        surcharge = amount * 0.15;
+
+    totalAmount = amount + surcharge;
+
+    if (totalAmount < 100)
+        totalAmount = 100;
+    printf("\n--- Electricity Bill ---\n");
+    printf("Customer ID    : %d\n", customerID);
+    printf("Customer Name  : %s\n", customerName);
+    printf("Units Consumed : %.2f\n", units);
+    printf("Amount Charges : Rs. %.2f\n", amount);
+    printf("Surcharge      : Rs. %.2f\n", surcharge);
+    printf("Net Amount     : Rs. %.2f\n", totalAmount);
+
+    return 0;
+}
